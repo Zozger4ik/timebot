@@ -1,0 +1,40 @@
+{
+  'responseId': '3f27f99c-0f39-4f3e-b707-036d9fa45e07-1ac88cc5',
+  'queryResult': {
+    'queryText': 'время',
+    'parameters': {},
+    'allRequiredParamsPresent': True,
+    'fulfillmentMessages': [
+      {
+        'text': {
+          'text': [
+            ''
+          ]
+        }
+      }
+    ],
+    'outputContexts': [
+      {
+        'name': 'projects/time-9uvm/agent/sessions/dd300d5f-71c4-1355-d648-a2736a4069a5/contexts/__system_counters__',
+        'parameters': {
+          'no-input': 0.0,
+          'no-match': 0.0
+        }
+      }
+    ],
+    'intent': {
+      'name': 'projects/time-9uvm/agent/intents/c7bcb2d3-2e52-4ad8-bf87-886fa33433f8',
+      'displayName': 'время'
+    },
+    'intentDetectionConfidence': 1.0,
+    'diagnosticInfo': {
+      'query_sentiment_analysis_error': 'INVALID_ARGUMENT: The language ru is not supported for document_sentiment analysis'
+    },
+    'languageCode': 'ru'
+  },
+  'originalDetectIntentRequest': {
+    'source': 'DIALOGFLOW_CONSOLE',
+    'payload': {}
+  },
+  'session': 'projects/time-9uvm/agent/sessions/dd300d5f-71c4-1355-d648-a2736a4069a5'
+}
