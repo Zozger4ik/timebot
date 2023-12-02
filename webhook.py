@@ -10,19 +10,23 @@ def index():
 
 
 
-
-def get_result():
-    # извлечение параметра
-    req = request.get_json(force=True)
-    print(req)
-    current_time = get_time(45.1, 67.2)
-    print(current_time)
 def get_time(latitude, longitude):
     url = f'https://timeapi.io/api/Time/current/coordinate?latitude={latitude}&longitude={longitude}'
     response = requests.get(url).json()
     time = response['time']
     date = response['date']
     return f'{time} {date}'
+def get_result():
+    req = request.get_json(force=True)
+    print(req)
+    parameters = req['queryResult']['parameters']
+    latitude = parameters['latitude']
+    longitude = parameters['longitude']
+    current_time = get_time(latitude, longitude)
+    print(current_time)
+    return {
+        'fulfillmentText': current_time
+    }
 
 
 
