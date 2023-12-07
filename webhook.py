@@ -5,18 +5,28 @@ app = Flask(__name__)
 
 
 @app.route('/')
-def index():
-    return 'Hello from Flask!'
+def index() -> str:
+    """
+    Тестовый маршрут для проверрки работы сервиса
+    :param longitude
+    :param latitude
+    :return:
+    """
+    return 'Ok'
 
 
 
-def get_time(latitude, longitude):
+def get_time(latitude: float, longitude:float)-> str:
     url = f'https://timeapi.io/api/Time/current/coordinate?latitude={latitude}&longitude={longitude}'
     response = requests.get(url).json()
     time = response['time']
     date = response['date']
     return f'{time} {date}'
 def get_result():
+    """
+    возвращает ответ боту
+    :return:
+    """
     req = request.get_json(force=True)
     print(req)
     parameters = req['queryResult']['parameters']
